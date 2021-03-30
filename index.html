@@ -17,13 +17,13 @@
         </div>
     </header>
     <div id="app">
-        <label style="color: white; margin-right: 5px;" for="select by genre">Select by genre</label>    
+        <label style="color: white; margin-right: 5px;" for="select by genre">Select by genre:</label>    
         <select v-model='genreinput' name="select by genre">
-            <option value="All">All</option>
+            <option>All</option>
             <option v-for="genre in genres">{{genre}}</option>
         </select>
         <main>
-            <div :class="((song.genre == genreinput) || (genreinput == 'All' || (genreinput == ''))) ? 'block' : 'none'" class="brano" v-for="song in songs[0]">
+            <div :class="((song.genre == genreinput) || (genreinput == 'All')) ? 'block' : 'none'" class="brano" v-for="song in songs[0]">
                 <img :src="song.poster" alt="">
                 <h2>{{song.title}}</h2>
                 <h3>{{song.author}}</h3>

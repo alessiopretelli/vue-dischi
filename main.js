@@ -1,15 +1,14 @@
 var app = new Vue({
     el: '#app',
     data: {
-        songs: ['temp'],
+        songs: [],
         genres: [],
-        genreinput: '',
+        genreinput: 'All',
     },
     mounted() {
         axios
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((result) => {
-                this.songs.splice(0, 1);
                 this.songs.push(result.data.response);
                 this.addgenre();
 
@@ -35,8 +34,24 @@ var app = new Vue({
         addgenre() {
             for (let i = 0; i < this.songs[0].length; i++) {
                     
-                if (!this.genres.includes(this.songs[0][i].genre)) {
-                    this.genres.push(this.songs[0][i].genre);
+                // if (!this.genres.includes(this.songs[0][i].genre)) {
+                //     this.genres.push(this.songs[0][i].genre);
+                // }
+
+                //variante senza metodo .includes()
+                var v = 0;
+                var tmp2 = this.songs[0][i].genre;
+
+                for (ii = 0; ii < this.genres.length; ii++) {
+
+                    if (tmp2 == this.genres[ii]) {
+                        v = 1;
+                    }
+
+                }
+
+                if (v == 0) {
+                    this.genres.push(tmp2);
                 }
 
             }

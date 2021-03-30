@@ -27,6 +27,9 @@ header {
 }
 
 #app select {
+    color: white;
+    border: none;
+    background-color: rgb(49, 49, 61);
     cursor: pointer;
     border-radius: 5px;
 }
@@ -55,8 +58,8 @@ main {
     display: block;
 }
 .brano img {
-    margin: 20px 0;
-    width: 70%;
+    margin: 15px 0;
+    width: 80%;
 }
 .brano h2 {
     color: white;
