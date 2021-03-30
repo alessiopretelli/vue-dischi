@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato';
+    text-align: center;
+    background-color: rgb(49, 49, 61);
+    height: 100vh;
+}
+
+header {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(61, 61, 68);
+    margin-bottom: 50px;
+}
+.logo {
+    height: 100%;
+    width: 100px;
+}
+.logo img {
+    width: 70%;
+    margin: 10px;
+}
+
+#app select {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main {
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.brano {
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(85, 85, 85);
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+}
+.brano.none {
+    display: none;
+}
+.brano.block {
+    display: block;
+}
+.brano img {
+    margin: 20px 0;
+    width: 70%;
+}
+.brano h2 {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px 10px 10px;
+}
+.brano p, .brano h3 {
+    color:rgb(165, 165, 165)
+}
